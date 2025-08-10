@@ -12,7 +12,7 @@ import SkillsText from "../sub/SkillsText";
 const Skills = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center h-full gap-3 relative overflow-hidden pb-110 py-20"
+      className="flex flex-col items-center justify-center h-full gap-3 relative overflow-hidden sm:pb-110 sm:py-20"
       style={{ transform: "scale(0.9)" }}
     >
       <SkillsText />

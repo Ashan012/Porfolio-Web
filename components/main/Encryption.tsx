@@ -11,7 +11,7 @@ const Encryption = () => {
       <div className="absolute w-auto h-auto top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
-          className="text-[40px] font-medium text-center text-gray-200"
+          className="text-[20px] sm:text-[40px] font-medium text-center text-gray-200"
         >
           <span>
             Performance
@@ -24,7 +24,7 @@ const Encryption = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center translate-y-[50px] absolute z-20 w-auto h-auto">
-        <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
+        <div className="hidden sm:flex flex-col items-center group cursor-pointer w-auto h-auto ">
           <Image
             src="/assets/LockTop.png"
             alt="lock"
