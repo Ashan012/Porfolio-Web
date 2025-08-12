@@ -7,7 +7,11 @@ import { Points, PointMaterial, Preload } from "@react-three/drei";
 import type { Points as PointsType } from "three";
 // @ts-expect-error: maath library has no type definitions
 import * as random from "maath/random/dist/maath-random.esm";
-const StarBackground = (props: any) => {
+
+// interface starBackgrroundProps {
+//   props: string;
+// }
+const StarBackground = (props: Record<string, unknown>) => {
   const ref = useRef<PointsType>(null!);
 
   const [sphere] = useState(() => {
@@ -30,7 +34,7 @@ const StarBackground = (props: any) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color="$fff"
+          color="#fff"
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
