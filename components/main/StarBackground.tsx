@@ -4,21 +4,22 @@ import React, { useState, useRef, Suspense } from "react";
 import { Mesh } from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
+import type { Points as PointsType } from "three";
 // @ts-expect-error: maath library has no type definitions
 import * as random from "maath/random/dist/maath-random.esm";
-type StarBackgroundProps = React.ComponentProps<typeof Points>;
+const StarBackground = (props: any) => {
+  const ref = useRef<PointsType>(null!);
 
-const StarBackground = (props: StarBackgroundProps) => {
-  console.log(props);
-  const ref = useRef<Mesh>(null!);
-  // const [sphere] = useState(() =>
-  //   random.inSphere(new Float32Array(5000), { radius: 1.2 })
-  // );
+  const [sphere] = useState(() => {
+    const arr = new Float32Array(5000 * 3); // 5000 points × 3 coords
+    random.inSphere(arr, { radius: 1.2 });
 
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000 * 3), { radius: 1.2 })
-  );
-
+    // ✅ Safety check: replace NaN with 0
+    for (let i = 0; i < arr.length; i++) {
+      if (isNaN(arr[i])) arr[i] = 0;
+    }
+    return arr;
+  });
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
     ref.current.rotation.y -= delta / 15;
