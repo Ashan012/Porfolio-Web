@@ -40,7 +40,7 @@ const Encryption = () => {
             className="z-10"
           />
         </div>
-        <div className="Welcome-box px-[15px] py-[4px] z-[20] border border-[#7042f88b] my-[20px] opacity-[0.9]">
+        <div className="Welcome-box px-[15px] py-[4px] z-[20] border border-[#7042f88b]  my-[20px] opacity-[0.9]">
           <h1 className="Welcome-text text-[12px]">Encyrption</h1>
         </div>
       </div>

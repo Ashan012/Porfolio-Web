@@ -9,17 +9,17 @@ const Project = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/assets/NextWebsite.png"
-          title="Modern Next js Website"
+          src="/assets/tomato.png"
+          title="Food Delivery App"
           desc="lorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme llorem"
         />
         <ProjectCard
-          src="/assets/NextWebsite.png"
-          title="Modern Next js Website"
+          src="/assets/eshop.png"
+          title="Ecommerce Web"
           desc="lorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme llorem"
         />
         <ProjectCard
-          src="/assets/NextWebsite.png"
+          src="/assets/portfolio.png"
           title="Modern Next js Website"
           desc="lorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme loremlorem lorme llorem"
         />
